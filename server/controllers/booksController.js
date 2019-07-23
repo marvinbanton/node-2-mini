@@ -21,5 +21,13 @@ module.exports = {
         books[bookIndex] = [title, author]
 
         res.status(200).json(books);
+    },
+
+    delete: function (req, res) {
+        const { bookId } = req.params
+        const bookIndex = books.findIndex(book => book.id === parseInt(bookId))
+        books.splice(bookIndex, 1)
+
+        res.status(200).json(books);
     }
 };
