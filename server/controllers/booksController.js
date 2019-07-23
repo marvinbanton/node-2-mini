@@ -15,7 +15,7 @@ module.exports = {
 
     update: function (req, res) {
         const { title, author } = req.body
-        const { bookid } = req.params
+        const { bookId } = req.params
 
         const bookIndex = books.findIndex(book => book.id === parseInt(bookId))
         books[bookIndex] = [title, author]
