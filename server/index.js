@@ -9,6 +9,7 @@ const PORT = 3001;
 //Middleware
 app.use(express.json())
 
+app.get('/api/books', bc.read);
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
