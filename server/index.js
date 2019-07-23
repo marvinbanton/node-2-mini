@@ -10,6 +10,7 @@ const PORT = 3001;
 app.use(express.json())
 
 app.get('/api/books', bc.read);
+app.post('/api/books', bc.create);
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
