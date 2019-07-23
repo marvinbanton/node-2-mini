@@ -11,6 +11,7 @@ app.use(express.json())
 
 app.get('/api/books', bc.read);
 app.post('/api/books', bc.create);
+app.put('/api/books/:bookId', bc.update)
 
 app.listen(PORT, () => {
     console.log(`Server listening on port ${PORT}`)
